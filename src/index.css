@@ -1,13 +1,198 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-size: 1rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.heading{
+    background-color: #EEF3FF;
+    padding-top: 0.1em;
+    text-align: center;
+    height: 1.5em;
+    color: #6159E6;
+}
+.sidebar{
+    background-image: linear-gradient(to top, #aeaff8, #bac1fb, #c8d2fe, #dae3ff, #eef3ff);
+    width: 15%;
+    margin-top: -0.5em;
+    height: 93.6vh;
+    color: #777779;
+}
+.userName{
+    padding-top: 0.5em;
+    padding-left: 1em;
+    color: #6159E6;
+}
+.userName h6{
+    color: #777779;
+}
+.tabs{
+    list-style: none;
+}
+.user{
+    padding: 1em 0.5em 0.5em 0em;
+    color: rgb(122, 122, 122);
+    font-weight: 600;
+}
+.user i, .icons i{
+    padding-right: 1em;
+}
+.icons{
+    color: rgb(122, 122, 122);
+    padding: 0.5em 1.5em 0.5em 2.5em;
+}
+.componentName{
+    color: #6159E6;
+    width: 85%;
+    height: 90vh;
+    position: absolute;
+    left: 15%;
+    top: 3.9em;
+    padding: 0.5em 1em 1em 1em;
+}
+.normalCard{
+    width: 18rem
+}
+.box{
+    background-image: linear-gradient(to bottom, #aeaff8, #bac1fb, #c8d2fe, #dae3ff, #eef3ff);
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+}
+.innerBox{
+    padding-right: 2em;
+}
+.form{
+    background-image: linear-gradient(to bottom, #aeaff8, #bac1fb, #c8d2fe, #dae3ff, #eef3ff);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+.formLabel {
+    color: #000;
+    font-weight: 600;
+}
+.button {
+    background-color: #6159E6;
+    font-weight: 500;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width:320px) {
+    .heading{
+        height: 2.5em;
+    }
+    .sidebar{
+        width: 100%;
+        height: 19.5em;
+        padding-top: 0.5em;
+    }
+    .componentName{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .normalCard{
+        width: 16rem
+    }
+    .box{
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    .innerBox{
+        padding-bottom: 0.5em;
+    }
+}
+
+@media (min-width:321px) and (max-width:375px) {
+    .sidebar{
+        width: 100%;
+        height: 19em;
+    }
+    .componentName{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .normalCard{
+        width: 19.5rem
+    }
+    .box{
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    .innerBox{
+        padding-bottom: 0.5em;
+    }
+}
+
+@media (min-width:376px) and (max-width:425px) {
+    .sidebar{
+        width: 100%;
+        height: 19em;
+    }
+    .componentName{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .normalCard{
+        width: 20rem;
+    }
+    .box{
+        padding: 1em;
+        padding-left: 2em;
+        display: flex;
+        flex-direction: column;
+    }
+    .innerBox{
+        padding-bottom: 0.5em;
+    }
+}
+
+@media (min-width:426px) and (max-width:768px) {
+    .sidebar{
+        width: 100%;
+        height: auto;
+    }    
+    .componentName{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .normalCard{
+        width: 18rem;
+    }
+    .box{
+        padding-left: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .innerBox{
+        padding: 1em;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .sidebar{
+        width: 20%;
+    }    
+    .componentName{
+        width: 80%;
+        left: 20%;
+    }
+    .box{
+        padding-left: 5em;
+        padding-bottom: 0em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .innerBox{
+        padding-right: 2em;
+        padding-bottom: 2em;
+    }
 }
